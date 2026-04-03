@@ -1,0 +1,44 @@
+.page {
+  min-height: 100vh;
+  background: #fafafa;
+  padding-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-bottom: 56px;
+  }
+}
+
+.main {
+  max-width: 975px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 293px;
+  gap: 28px;
+  align-items: start;
+}
+
+.feedColumn {
+  min-width: 0;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tablet: hide sidebar, widen feed */
+@media (max-width: 1024px) {
+  .main {
+    grid-template-columns: 1fr;
+    max-width: 630px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 12px;
+  }
+}
