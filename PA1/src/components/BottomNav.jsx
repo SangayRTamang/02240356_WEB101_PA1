@@ -1,6 +1,6 @@
 import styles from './BottomNav.module.css'
 
-/** Mobile primary navigation (replaces top icon row on narrow screens). */
+/** Mobile navigation (replaces top icon row on narrow screens). */
 export function BottomNav() {
   return (
     <nav className={styles.nav} aria-label="Mobile">

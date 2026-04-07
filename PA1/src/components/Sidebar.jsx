@@ -1,6 +1,5 @@
 import styles from './Sidebar.module.css'
 
-/** Desktop / large tablet: profile summary and suggested accounts. */
 export function Sidebar({ currentUser, suggestions }) {
   return (
     <aside className={styles.sidebar} aria-label="Account suggestions">

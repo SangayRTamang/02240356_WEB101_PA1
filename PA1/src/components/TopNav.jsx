@@ -1,6 +1,6 @@
 import styles from './TopNav.module.css'
 
-/** Top navigation: logo, search, and primary actions (desktop / tablet). */
+/** Top navigation: logo, search, and primary actions. */
 export function TopNav() {
   return (
     <header className={styles.bar} role="banner">

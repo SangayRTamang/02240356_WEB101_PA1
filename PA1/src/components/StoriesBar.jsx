@@ -1,6 +1,6 @@
 import styles from './StoriesBar.module.css'
 
-/** Horizontal stories row (reusable list from `stories` data). */
+/** stories row. */
 export function StoriesBar({ stories }) {
   return (
     <section className={styles.wrap} aria-label="Stories">
