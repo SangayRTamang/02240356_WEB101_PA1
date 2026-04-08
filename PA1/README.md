@@ -1,8 +1,8 @@
-# Instagram-clone — JavaScript (React + Vite)
+# Instagram-clone (React + Vite)
 
 Overview
-This project is a React-based of the Instagram webpage replica using Vite and react but it isn't exactly like the original instagram webpage 
-The application replicates the core layout and UI of instagrams browse page including the navgiation bar, stories bar, and posts.
+This project is a React-based web of the Instagram webpage replica using Vite and react but it is not exactly like the original instagram webpage. 
+The application replicates the core layout and UI of instagram's browse page including the navgiation bar, stories bar and posts.
 
 ## Tech Stack
 
@@ -26,7 +26,7 @@ src
 
 ## Data
 
-All the mock data lives in `src/data/feedData.js` and is passed into `StoriesBar`, `PostCard`, and `Sidebar`.
+All the mock data are in the files: `src/data/feedData.js` and is passed into the components `StoriesBar`, `PostCard`, and `Sidebar`.
 
 ## Reusable Components
 
