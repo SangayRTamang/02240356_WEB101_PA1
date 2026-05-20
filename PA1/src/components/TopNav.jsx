@@ -1,23 +1,23 @@
-import styles from './TopNav.module.css'
+import './TopNav.css'
 
 /** Top navigation: logo, search, and primary actions. */
 export function TopNav() {
   return (
-    <header className={styles.bar} role="banner">
-      <div className={styles.inner}>
-        <a className={styles.logo} href="#top" aria-label="Instagram home">
+    <header className="bar" role="banner">
+      <div className="inner">
+        <a className="logo" href="#top" aria-label="Instagram home">
           Instagram
         </a>
-        <label className={styles.searchWrap}>
-          <span className={styles.visuallyHidden}>Search</span>
+        <label className="searchWrap">
+          <span className="visuallyHidden">Search</span>
           <input
-            className={styles.search}
+            className="search"
             type="search"
             placeholder="Search"
             autoComplete="off"
           />
         </label>
-        <nav className={styles.icons} aria-label="Main">
+        <nav className="icons" aria-label="Main">
           <IconHome />
           <IconDm />
           <IconCreate />
@@ -32,7 +32,7 @@ export function TopNav() {
 
 function IconHome() {
   return (
-    <button type="button" className={styles.iconBtn} aria-label="Home">
+    <button type="button" className="iconBtn" aria-label="Home">
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
         <path
           fill="currentColor"
@@ -45,7 +45,7 @@ function IconHome() {
 
 function IconDm() {
   return (
-    <button type="button" className={styles.iconBtn} aria-label="Direct messages">
+    <button type="button" className="iconBtn" aria-label="Direct messages">
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
         <path
           fill="none"
@@ -60,7 +60,7 @@ function IconDm() {
 
 function IconCreate() {
   return (
-    <button type="button" className={styles.iconBtn} aria-label="Create post">
+    <button type="button" className="iconBtn" aria-label="Create post">
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
         <rect
           x="3"
@@ -80,7 +80,7 @@ function IconCreate() {
 
 function IconExplore() {
   return (
-    <button type="button" className={styles.iconBtn} aria-label="Explore">
+    <button type="button" className="iconBtn" aria-label="Explore">
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
         <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2" />
         <path fill="none" stroke="currentColor" strokeWidth="2" d="m16 8-8 8" />
@@ -91,7 +91,7 @@ function IconExplore() {
 
 function IconHeart() {
   return (
-    <button type="button" className={styles.iconBtn} aria-label="Activity">
+    <button type="button" className="iconBtn" aria-label="Activity">
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
         <path
           fill="none"
@@ -106,8 +106,8 @@ function IconHeart() {
 
 function IconAvatar() {
   return (
-    <button type="button" className={styles.iconBtn} aria-label="Profile">
-      <span className={styles.miniAvatar} />
+    <button type="button" className="iconBtn" aria-label="Profile">
+      <span className="miniAvatar" />
     </button>
   )
 }

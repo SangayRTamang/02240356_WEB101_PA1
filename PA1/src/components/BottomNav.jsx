@@ -1,28 +1,28 @@
-import styles from './BottomNav.module.css'
+import './BottomNav.css'
 
 /** Mobile navigation (replaces top icon row on narrow screens). */
 export function BottomNav() {
   return (
-    <nav className={styles.nav} aria-label="Mobile">
-      <a className={styles.item} href="#home" aria-current="page">
+    <nav className="nav" aria-label="Mobile">
+      <a className="item" href="#home" aria-current="page">
         <HomeIcon />
-        <span className={styles.visuallyHidden}>Home</span>
+        <span className="visuallyHidden">Home</span>
       </a>
-      <a className={styles.item} href="#search">
+      <a className="item" href="#search">
         <SearchIcon />
-        <span className={styles.visuallyHidden}>Search</span>
+        <span className="visuallyHidden">Search</span>
       </a>
-      <a className={styles.item} href="#reels">
+      <a className="item" href="#reels">
         <ReelsIcon />
-        <span className={styles.visuallyHidden}>Reels</span>
+        <span className="visuallyHidden">Reels</span>
       </a>
-      <a className={styles.item} href="#shop">
+      <a className="item" href="#shop">
         <ShopIcon />
-        <span className={styles.visuallyHidden}>Shop</span>
+        <span className="visuallyHidden">Shop</span>
       </a>
-      <a className={styles.item} href="#profile">
-        <span className={styles.profileDot} />
-        <span className={styles.visuallyHidden}>Profile</span>
+      <a className="item" href="#profile">
+        <span className="profileDot" />
+        <span className="visuallyHidden">Profile</span>
       </a>
     </nav>
   )

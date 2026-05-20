@@ -1,10 +1,10 @@
-import styles from './StoriesBar.module.css'
+import './StoriesBar.css'
 
-/** stories row. */
+/** Stories row. */
 export function StoriesBar({ stories }) {
   return (
-    <section className={styles.wrap} aria-label="Stories">
-      <div className={styles.track}>
+    <section className="wrap" aria-label="Stories">
+      <div className="track">
         {stories.map((story) => (
           <StoryRing key={story.id} story={story} />
         ))}
@@ -15,14 +15,14 @@ export function StoriesBar({ stories }) {
 
 function StoryRing({ story }) {
   const { user, viewed } = story
-  const ringClass = viewed ? styles.ringViewed : styles.ringNew
+  const ringClass = viewed ? 'ringViewed' : 'ringNew'
 
   return (
-    <button type="button" className={styles.storyBtn}>
-      <span className={`${styles.ringOuter} ${ringClass}`}>
-        <span className={styles.ringInner}>
+    <button type="button" className="storyBtn">
+      <span className={`ringOuter ${ringClass}`}>
+        <span className="ringInner">
           <img
-            className={styles.avatar}
+            className="avatar"
             src={user.avatarUrl}
             alt=""
             width={56}
@@ -31,7 +31,7 @@ function StoryRing({ story }) {
           />
         </span>
       </span>
-      <span className={styles.username}>{user.username}</span>
+      <span className="username">{user.username}</span>
     </button>
   )
 }

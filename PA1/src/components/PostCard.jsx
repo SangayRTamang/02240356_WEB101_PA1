@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './PostCard.module.css'
+import './PostCard.css'
 
 export function PostCard({ post }) {
   const [liked, setLiked] = useState(false)
@@ -7,57 +7,57 @@ export function PostCard({ post }) {
   const likeCount = post.likes + (liked ? 1 : 0)
 
   return (
-    <article className={styles.card}>
-      <header className={styles.header}>
-        <div className={styles.userRow}>
+    <article className="card">
+      <header className="header">
+        <div className="userRow">
           <img
-            className={styles.avatar}
+            className="avatar"
             src={post.user.avatarUrl}
             alt=""
             width={32}
             height={32}
             loading="lazy"
           />
-          <div className={styles.names}>
-            <span className={styles.username}>
+          <div className="names">
+            <span className="username">
               {post.user.username}
               {post.user.verified ? (
-                <span className={styles.verified} title="Verified">
+                <span className="verified" title="Verified">
                   ✓
                 </span>
               ) : null}
             </span>
           </div>
         </div>
-        <button type="button" className={styles.more} aria-label="More options">
+        <button type="button" className="more" aria-label="More options">
           ···
         </button>
       </header>
 
-      <div className={styles.media}>
+      <div className="media">
         <img src={post.imageUrl} alt={post.alt} loading="lazy" />
       </div>
 
-      <div className={styles.body}>
-        <div className={styles.actions}>
+      <div className="body">
+        <div className="actions">
           <button
             type="button"
-            className={styles.actionBtn}
+            className="actionBtn"
             aria-pressed={liked}
             aria-label={liked ? 'Unlike' : 'Like'}
             onClick={() => setLiked((v) => !v)}
           >
             {liked ? <HeartFilled /> : <HeartOutline />}
           </button>
-          <button type="button" className={styles.actionBtn} aria-label="Comment">
+          <button type="button" className="actionBtn" aria-label="Comment">
             <CommentIcon />
           </button>
-          <button type="button" className={styles.actionBtn} aria-label="Share">
+          <button type="button" className="actionBtn" aria-label="Share">
             <ShareIcon />
           </button>
           <button
             type="button"
-            className={`${styles.actionBtn} ${styles.save}`}
+            className="actionBtn save"
             aria-pressed={saved}
             aria-label={saved ? 'Unsave' : 'Save'}
             onClick={() => setSaved((v) => !v)}
@@ -66,27 +66,27 @@ export function PostCard({ post }) {
           </button>
         </div>
 
-        <p className={styles.likes}>
+        <p className="likes">
           <strong>{likeCount.toLocaleString()}</strong> likes
         </p>
 
-        <p className={styles.caption}>
+        <p className="caption">
           <strong>{post.user.username}</strong> {post.caption}
         </p>
 
         {post.commentsPreview && post.commentsPreview.length > 0 ? (
-          <button type="button" className={styles.viewComments}>
+          <button type="button" className="viewComments">
             View all comments
           </button>
         ) : null}
 
         {post.commentsPreview?.slice(0, 2).map((c, i) => (
-          <p key={i} className={styles.comment}>
+          <p key={i} className="comment">
             <strong>{c.user.username}</strong> {c.text}
           </p>
         ))}
 
-        <time className={styles.time} dateTime="2026-04-03">
+        <time className="time" dateTime="2026-04-03">
           {post.timeAgo}
         </time>
       </div>

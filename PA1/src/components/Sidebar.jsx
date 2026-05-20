@@ -1,11 +1,11 @@
-import styles from './Sidebar.module.css'
+import './Sidebar.css'
 
 export function Sidebar({ currentUser, suggestions }) {
   return (
-    <aside className={styles.sidebar} aria-label="Account suggestions">
-      <div className={styles.me}>
+    <aside className="sidebar" aria-label="Account suggestions">
+      <div className="me">
         <img
-          className={styles.avatarLg}
+          className="avatarLg"
           src={currentUser.avatarUrl}
           alt=""
           width={56}
@@ -13,44 +13,44 @@ export function Sidebar({ currentUser, suggestions }) {
           loading="lazy"
         />
         <div>
-          <p className={styles.uname}>{currentUser.username}</p>
-          <p className={styles.full}>{currentUser.fullName}</p>
+          <p className="uname">{currentUser.username}</p>
+          <p className="full">{currentUser.fullName}</p>
         </div>
-        <button type="button" className={styles.switch}>
+        <button type="button" className="switch">
           Switch
         </button>
       </div>
 
-      <div className={styles.suggestHead}>
+      <div className="suggestHead">
         <span>Suggested for you</span>
-        <button type="button" className={styles.seeAll}>
+        <button type="button" className="seeAll">
           See All
         </button>
       </div>
 
-      <ul className={styles.list}>
+      <ul className="list">
         {suggestions.map((s) => (
-          <li key={s.id} className={styles.row}>
+          <li key={s.id} className="row">
             <img
-              className={styles.avatarSm}
+              className="avatarSm"
               src={s.avatarUrl}
               alt=""
               width={32}
               height={32}
               loading="lazy"
             />
-            <div className={styles.meta}>
-              <p className={styles.unameSm}>{s.username}</p>
-              <p className={styles.reason}>{s.reason}</p>
+            <div className="meta">
+              <p className="unameSm">{s.username}</p>
+              <p className="reason">{s.reason}</p>
             </div>
-            <button type="button" className={styles.follow}>
+            <button type="button" className="follow">
               Follow
             </button>
           </li>
         ))}
       </ul>
 
-      <footer className={styles.footer}>
+      <footer className="footer">
         <p>About · Help · Press · API · Jobs · Privacy · Terms · Locations</p>
         <p>© 2026 Instagram clone (student project)</p>
       </footer>
